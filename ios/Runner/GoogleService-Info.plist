@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>994395131462-43n0h3otpc6f71fjf07okg7mf97cqk3c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.994395131462-43n0h3otpc6f71fjf07okg7mf97cqk3c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCNGMv-jcWZCd8evyiojcl-pcXHpel3vHY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>994395131462</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.eTicaretApp</string>
+	<key>PROJECT_ID</key>
+	<string>e-ticaret-919d7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>e-ticaret-919d7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:994395131462:ios:a4eeda90ad091043750447</string>
+</dict>
+</plist>
