@@ -1,10 +1,11 @@
 import 'package:e_ticaret_app/database/concrete/firebase.dart';
 import 'package:e_ticaret_app/modelView/categoriesManager.dart';
+import 'package:e_ticaret_app/modelView/userManager.dart';
 import 'package:e_ticaret_app/view/cartView.dart';
 import 'package:e_ticaret_app/view/favoritesView.dart';
 import 'package:e_ticaret_app/widgets/appBarWidgets.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 class KategoriSayfasi extends StatefulWidget {
   const KategoriSayfasi({super.key});
 
@@ -15,10 +16,11 @@ class KategoriSayfasi extends StatefulWidget {
 
 class _KategoriSayfasiState extends State<KategoriSayfasi> {
    CategoriesManager categoriesManager = CategoriesManager(FirebaseDb());
+    final UserManager c = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBarMethod(context, const Text("Kategoriler"),const FavoritesView(), const CartView() ),
+        appBar: appBarMethod(context, Obx(() => Text("Kategori Seç-${c.userList[0].ad}")),const FavoritesView(), const CartView() ),
         body: FutureBuilder(
           future: categoriesManager.getKategori(),
           builder: (BuildContext context, snapshot) {

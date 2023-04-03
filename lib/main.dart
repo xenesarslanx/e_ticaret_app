@@ -1,5 +1,5 @@
 import 'package:e_ticaret_app/firebase_options.dart';
-import 'package:e_ticaret_app/view/categoriesView.dart';
+import 'package:e_ticaret_app/view/loginView.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ void main() async{
   );
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: KategoriSayfasi(),
+    home: LoginView(),
   ));
   
 }
