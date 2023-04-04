@@ -3,9 +3,10 @@ import 'package:e_ticaret_app/modelView/categoriesManager.dart';
 import 'package:e_ticaret_app/modelView/userManager.dart';
 import 'package:e_ticaret_app/view/cartView.dart';
 import 'package:e_ticaret_app/view/favoritesView.dart';
+import 'package:e_ticaret_app/view/loginView.dart';
 import 'package:e_ticaret_app/widgets/appBarWidgets.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 class KategoriSayfasi extends StatefulWidget {
   const KategoriSayfasi({super.key});
 
@@ -16,11 +17,35 @@ class KategoriSayfasi extends StatefulWidget {
 
 class _KategoriSayfasiState extends State<KategoriSayfasi> {
    CategoriesManager categoriesManager = CategoriesManager(FirebaseDb());
-    final UserManager c = Get.find();
+   // final UserManager c = Get.find();
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBarMethod(context, Obx(() => Text("Kategori Seç-${c.userList[0].ad}")),const FavoritesView(), const CartView() ),
+        appBar: appBarMethod(context,  FutureBuilder<List<Map<String, dynamic>>>(
+    future: UserManager().getUserList(),
+    builder: (context, snapshot) {
+      if (snapshot.hasData) {
+       var userNameList = snapshot.data;
+     print(userNameList![0]["ad"]);
+     
+        return TextButton(
+          onPressed: () async{
+    final prefs = await SharedPreferences.getInstance();
+    prefs.remove("userList");
+              print("çıkış");
+               Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const LoginView(),
+        ),
+      );
+          },
+         child: Text("Çıkış Yap- ${userNameList[0]["ad"]}", style: const TextStyle(fontSize: 18,color: Colors.red),));
+      } else {
+        return const CircularProgressIndicator();
+      }
+    },
+  ),const FavoritesView(), const CartView(), ),
         body: FutureBuilder(
           future: categoriesManager.getKategori(),
           builder: (BuildContext context, snapshot) {

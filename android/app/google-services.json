@@ -29,6 +29,13 @@
             {
               "client_id": "994395131462-h4fo63fda921re5t94rulcojk7pdfn6r.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "994395131462-43n0h3otpc6f71fjf07okg7mf97cqk3c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.eTicaretApp"
+              }
             }
           ]
         }
