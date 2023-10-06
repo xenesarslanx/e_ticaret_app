@@ -50,8 +50,8 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA9cU8bxjsXS9jDGE5nSX0bkgEGFyFBYPY',
-    appId: '1:994395131462:web:7fb766b30d0029ff750447',
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    appId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     messagingSenderId: '994395131462',
     projectId: 'e-ticaret-919d7',
     authDomain: 'e-ticaret-919d7.firebaseapp.com',
@@ -59,8 +59,8 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBl89VH8reGJdSBKCfB_yKf6qXKiYolo00',
-    appId: '1:994395131462:android:1a565789c349601a750447',
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    appId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     messagingSenderId: '994395131462',
     projectId: 'e-ticaret-919d7',
     storageBucket: 'e-ticaret-919d7.appspot.com',
